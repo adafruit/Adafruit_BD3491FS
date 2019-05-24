@@ -14,22 +14,22 @@ void setup() {
     while (1);
   }
   Serial.println("Found BD3491FS chip");
-  bd3491fs.setInputGain(BD3491FSGAIN_20DB);
-  bd3491fs.setVolumeCh1(BD3491FSGAIN_0DB);
-  bd3491fs.setVolumeCh2(BD3491FSGAIN_0DB);
+  bd3491fs.setInputGain(BD3491FS_GAIN_20DB);
+  bd3491fs.setVolumeCh1(BD3491FS_GAIN_0DB);
+  bd3491fs.setVolumeCh2(BD3491FS_GAIN_0DB);
 }
 
 
 void loop() {
 
   bd3491fs.setCurrentInput(BD3491FS_INPUT_A);
-  bd3491fs.setVolumeCh1(BD3491FSGAIN_0DB);
-  bd3491fs.setVolumeCh2(BD3491FSGAIN_10DB);
+  bd3491fs.setVolumeCh1(BD3491FS_GAIN_0DB);
+  bd3491fs.setVolumeCh2(BD3491FS_GAIN_10DB);
 
   delay(5000);
 
   bd3491fs.setCurrentInput(BD3491FS_INPUT_B);
-  bd3491fs.setVolumeCh1(BD3491FSGAIN_10DB);
-  bd3491fs.setVolumeCh2(BD3491FSGAIN_0DB);
+  bd3491fs.setVolumeCh1(BD3491FS_GAIN_10DB);
+  bd3491fs.setVolumeCh2(BD3491FS_GAIN_0DB);
   delay(5000);
 }
