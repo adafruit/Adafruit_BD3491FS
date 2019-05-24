@@ -39,14 +39,14 @@
  * Allowed values for `setCurrentInput`.
  */
 typedef enum _active_input {
-  BD3491FS_INPUT_A, /** Inputs A1 and A2 **/
-  BD3491FS_INPUT_B, /** Inputs B1 and B2 **/
-  BD3491FS_INPUT_C, /** Inputs C1 and C2 **/
-  BD3491FS_INPUT_D, /** Inputs D1 and D2 **/
-  BD3491FS_INPUT_E, /** Inputs E1 and E2 **/
-  BD3491FS_INPUT_SHORT, /** Short inputs **/
-  BD3491FS_INPUT_F, /** Inputs F1 and F2 **/
-  BD3491FS_INPUT_MUTE, /** Mute all **/
+  BD3491FS_INPUT_A, ///< Inputs A1 and A2
+  BD3491FS_INPUT_B, ///< Inputs B1 and B2
+  BD3491FS_INPUT_C, ///< Inputs C1 and C2
+  BD3491FS_INPUT_D, ///< Inputs D1 and D2
+  BD3491FS_INPUT_E, ///< Inputs E1 and E2
+  BD3491FS_INPUT_SHORT, ///< Short inputs
+  BD3491FS_INPUT_F, ///< Inputs F1 and F2
+  BD3491FS_INPUT_MUTE, ///< Mute all
 } BD3491FS_Input;
 
 /**
