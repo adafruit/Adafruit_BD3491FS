@@ -91,12 +91,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a6be619adb56d650e92ae288bd37fcfac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___b_d3491_f_s.html#a6be619adb56d650e92ae288bd37fcfac">setInputGain</a> (<a class="el" href="_adafruit___b_d3491_f_s_8h.html#a6d0ca5ceca4d789ec8ae712e243dce0b">BD3491FS_Level</a> gain)</td></tr>
 <tr class="memdesc:a6be619adb56d650e92ae288bd37fcfac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gain applied to the active inputs.  <a href="#a6be619adb56d650e92ae288bd37fcfac">More...</a><br /></td></tr>
 <tr class="separator:a6be619adb56d650e92ae288bd37fcfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9aa6a621755b4ecdfd984f670bcfdb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___b_d3491_f_s.html#aa9aa6a621755b4ecdfd984f670bcfdb9">setVolumeCh1</a> (<a class="el" href="_adafruit___b_d3491_f_s_8h.html#a6d0ca5ceca4d789ec8ae712e243dce0b">BD3491FS_Level</a> attenuation)</td></tr>
-<tr class="memdesc:aa9aa6a621755b4ecdfd984f670bcfdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the attenuation for output channel 1.  <a href="#aa9aa6a621755b4ecdfd984f670bcfdb9">More...</a><br /></td></tr>
-<tr class="separator:aa9aa6a621755b4ecdfd984f670bcfdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac68528bca7f044953798b2fa69e530ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___b_d3491_f_s.html#ac68528bca7f044953798b2fa69e530ef">setVolumeCh2</a> (<a class="el" href="_adafruit___b_d3491_f_s_8h.html#a6d0ca5ceca4d789ec8ae712e243dce0b">BD3491FS_Level</a> attenuation)</td></tr>
-<tr class="memdesc:ac68528bca7f044953798b2fa69e530ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the attenuation for output channel 2.  <a href="#ac68528bca7f044953798b2fa69e530ef">More...</a><br /></td></tr>
-<tr class="separator:ac68528bca7f044953798b2fa69e530ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779224134dece4cff0f11170d62e72fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___b_d3491_f_s.html#a779224134dece4cff0f11170d62e72fa">setVolumeCh1</a> (uint8_t attenuation)</td></tr>
+<tr class="memdesc:a779224134dece4cff0f11170d62e72fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the attenuation for output channel 1.  <a href="#a779224134dece4cff0f11170d62e72fa">More...</a><br /></td></tr>
+<tr class="separator:a779224134dece4cff0f11170d62e72fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f808e046fdbb0461bd205c4012bccaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___b_d3491_f_s.html#a9f808e046fdbb0461bd205c4012bccaf">setVolumeCh2</a> (uint8_t attenuation)</td></tr>
+<tr class="memdesc:a9f808e046fdbb0461bd205c4012bccaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the attenuation for output channel 2.  <a href="#a9f808e046fdbb0461bd205c4012bccaf">More...</a><br /></td></tr>
+<tr class="separator:a9f808e046fdbb0461bd205c4012bccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab79e626494a361bf23bc3db35132606a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___b_d3491_f_s.html#ab79e626494a361bf23bc3db35132606a">setBassGain</a> (<a class="el" href="_adafruit___b_d3491_f_s_8h.html#a6d0ca5ceca4d789ec8ae712e243dce0b">BD3491FS_Level</a> level, bool cut)</td></tr>
 <tr class="memdesc:ab79e626494a361bf23bc3db35132606a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applys gain to or cuts the Bass range.  <a href="#ab79e626494a361bf23bc3db35132606a">More...</a><br /></td></tr>
 <tr class="separator:ab79e626494a361bf23bc3db35132606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,15 +197,15 @@ Adafruit_I2CRegister *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <p>Sets the gain applied to the active inputs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gain</td><td>The new input to be selected. Must be a <code>BD3491FS_Input</code> </td></tr>
+    <tr><td class="paramname">gain</td><td>The new input to be selected. Must be a <code>BD3491FS_Input</code> that is not 10dB or 14dB </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="aa9aa6a621755b4ecdfd984f670bcfdb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9aa6a621755b4ecdfd984f670bcfdb9">&#9670;&nbsp;</a></span>setVolumeCh1()</h2>
+<a id="a779224134dece4cff0f11170d62e72fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779224134dece4cff0f11170d62e72fa">&#9670;&nbsp;</a></span>setVolumeCh1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +213,7 @@ Adafruit_I2CRegister *&#160;</td><td class="memItemRight" valign="bottom"><a cla
         <tr>
           <td class="memname">void Adafruit_BD3491FS::setVolumeCh1 </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_adafruit___b_d3491_f_s_8h.html#a6d0ca5ceca4d789ec8ae712e243dce0b">BD3491FS_Level</a>&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>attenuation</em></td><td>)</td>
           <td></td>
         </tr>
@@ -223,15 +223,15 @@ Adafruit_I2CRegister *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <p>Sets the attenuation for output channel 1. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">attenuation</td><td>The attenuation to applied to output channnel 1. Must be a <code>BD3491FS_Level</code> </td></tr>
+    <tr><td class="paramname">attenuation</td><td>The attenuation to applied to output channnel 1. Must be an integer &gt; 0 and &lt; 88 </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ac68528bca7f044953798b2fa69e530ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac68528bca7f044953798b2fa69e530ef">&#9670;&nbsp;</a></span>setVolumeCh2()</h2>
+<a id="a9f808e046fdbb0461bd205c4012bccaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f808e046fdbb0461bd205c4012bccaf">&#9670;&nbsp;</a></span>setVolumeCh2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +239,7 @@ Adafruit_I2CRegister *&#160;</td><td class="memItemRight" valign="bottom"><a cla
         <tr>
           <td class="memname">void Adafruit_BD3491FS::setVolumeCh2 </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_adafruit___b_d3491_f_s_8h.html#a6d0ca5ceca4d789ec8ae712e243dce0b">BD3491FS_Level</a>&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>attenuation</em></td><td>)</td>
           <td></td>
         </tr>
@@ -249,7 +249,7 @@ Adafruit_I2CRegister *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <p>Sets the attenuation for output channel 2. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">attenuation</td><td>The attenuation to applied to output channnel 2. Must be a <code>BD3491FS_Level</code> </td></tr>
+    <tr><td class="paramname">attenuation</td><td>The attenuation to applied to output channnel 2. Must be an integer &gt; 0 and &lt; 88 </td></tr>
   </table>
   </dd>
 </dl>
@@ -285,7 +285,7 @@ Adafruit_I2CRegister *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <p>Applys gain to or cuts the Bass range. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>The amount of gain or cut. Must be a <code>BD3491FS_Level</code> </td></tr>
+    <tr><td class="paramname">level</td><td>The amount of gain or cut. Must be a <code>BD3491FS_Level</code> and cannot be above 14dB </td></tr>
     <tr><td class="paramname">cut</td><td>Cut or Boost. Set true to cut, or false to boost </td></tr>
   </table>
   </dd>
@@ -322,7 +322,7 @@ Adafruit_I2CRegister *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <p>Applys gain to or cuts the Treble range. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>The amount of gain or cut. Must be a <code>BD3491FS_Level</code> </td></tr>
+    <tr><td class="paramname">level</td><td>The amount of gain or cut. Must be a <code>BD3491FS_Level</code> and cannot be above 14dB </td></tr>
     <tr><td class="paramname">cut</td><td>Cut or Boost. Set true to cut, or false to boost </td></tr>
   </table>
   </dd>
