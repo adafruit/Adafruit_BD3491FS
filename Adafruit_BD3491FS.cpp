@@ -49,14 +49,25 @@ Adafruit_BD3491FS::Adafruit_BD3491FS(void) {}
  *            The Wire object to be used for I2C connections.
  *    @return True if initialization was successful, otherwise false.
  */
-boolean Adafruit_BD3491FS::begin(uint8_t i2c_address, TwoWire *wire) {
+bool Adafruit_BD3491FS::begin(uint8_t i2c_address, TwoWire *wire) {
   i2c_dev = new Adafruit_I2CDevice(i2c_address, wire);
 
   if (!i2c_dev->begin()) {
     return false;
   }
-
+  reset();
   return true;
+}
+
+/**************************************************************************/
+/*!
+    @brief Resets the device
+*/
+/**************************************************************************/
+void Adafruit_BD3491FS::reset(void){
+    Adafruit_I2CRegister reset =  
+      Adafruit_I2CRegister(i2c_dev, BD3491FS_SYSTEM_RESET, 1);
+    reset.write(0x81);
 }
 
 /**************************************************************************/

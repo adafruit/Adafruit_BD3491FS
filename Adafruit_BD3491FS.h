@@ -74,7 +74,8 @@ typedef enum _level {
 class Adafruit_BD3491FS {
 public:
   Adafruit_BD3491FS();
-  boolean begin(uint8_t i2c_addr=BD3491FS_I2CADDR_DEFAULT, TwoWire *wire = &Wire);
+  bool begin(uint8_t i2c_addr=BD3491FS_I2CADDR_DEFAULT, TwoWire *wire = &Wire);
+  void reset(void);
   void setCurrentInput(BD3491FS_Input input);
   void setInputGain(BD3491FS_Level gain);
   void setVolumeCh1(BD3491FS_Level attenuation);
