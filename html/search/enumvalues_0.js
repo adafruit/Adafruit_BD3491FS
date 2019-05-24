@@ -10,6 +10,7 @@ var searchData=
   ['bd3491fs_5fgain_5f4db',['BD3491FS_GAIN_4DB',['../_adafruit___b_d3491_f_s_8h.html#accd158ca246a94f50bd4a6f164a3434ca883d1da3d17051dd6ea8267ba437dd3c',1,'Adafruit_BD3491FS.h']]],
   ['bd3491fs_5fgain_5f6db',['BD3491FS_GAIN_6DB',['../_adafruit___b_d3491_f_s_8h.html#accd158ca246a94f50bd4a6f164a3434ca4bf9c4511b38fe6eb5fdf7a3642533f3',1,'Adafruit_BD3491FS.h']]],
   ['bd3491fs_5fgain_5f8db',['BD3491FS_GAIN_8DB',['../_adafruit___b_d3491_f_s_8h.html#accd158ca246a94f50bd4a6f164a3434ca67dca1e137bcf7804e0502d72b9df77a',1,'Adafruit_BD3491FS.h']]],
+  ['bd3491fs_5finput_5fa',['BD3491FS_INPUT_A',['../_adafruit___b_d3491_f_s_8h.html#a591546a228b2769337ccc188a014a905ab56da52b1b9b154677a6bef745064f36',1,'Adafruit_BD3491FS.h']]],
   ['bd3491fs_5finput_5fb',['BD3491FS_INPUT_B',['../_adafruit___b_d3491_f_s_8h.html#a591546a228b2769337ccc188a014a905adad3765fbc187644589db9f3759dfefc',1,'Adafruit_BD3491FS.h']]],
   ['bd3491fs_5finput_5fc',['BD3491FS_INPUT_C',['../_adafruit___b_d3491_f_s_8h.html#a591546a228b2769337ccc188a014a905a8f9644359aad572f934e658c81608230',1,'Adafruit_BD3491FS.h']]],
   ['bd3491fs_5finput_5fd',['BD3491FS_INPUT_D',['../_adafruit___b_d3491_f_s_8h.html#a591546a228b2769337ccc188a014a905a182af39bd397efac51a4dc65058bab91',1,'Adafruit_BD3491FS.h']]],
