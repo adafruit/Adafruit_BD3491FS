@@ -87,10 +87,14 @@ void Adafruit_BD3491FS::setCurrentInput(BD3491FS_Input input){
 /*!
     @brief Sets the gain applied to the active inputs.
     @param  gain
-            The new input to be selected. Must be a `BD3491FS_Input`
+            The new input to be selected. Must be a `BD3491FS_Input` that is 
+            not 10dB or 14dB
 */
 /**************************************************************************/
 void Adafruit_BD3491FS::setInputGain(BD3491FS_Level gain){
+  if((gain == 5) || (gain == 7)){
+    return;
+  }
     Adafruit_I2CRegister input_gain =  
       Adafruit_I2CRegister(i2c_dev, BD3491FS_INPUT_GAIN, 1);
     input_gain.write(gain << 1);
@@ -101,10 +105,13 @@ void Adafruit_BD3491FS::setInputGain(BD3491FS_Level gain){
     @brief Sets the attenuation for output channel 1.
     @param  attenuation
             The attenuation to applied to output channnel 1. 
-            Must be a `BD3491FS_Level`
+            Must be an integer > 0 and < 88
 */
 /**************************************************************************/
-void Adafruit_BD3491FS::setVolumeCh1(BD3491FS_Level attenuation){
+void Adafruit_BD3491FS::setVolumeCh1(uint8_t attenuation){
+    if (attenuation > 87){
+      return;
+    }
     Adafruit_I2CRegister volume =  
       Adafruit_I2CRegister(i2c_dev, BD3491FS_VOLUME_GAIN_CH1, 1);
     volume.write(attenuation << 1);
@@ -115,10 +122,13 @@ void Adafruit_BD3491FS::setVolumeCh1(BD3491FS_Level attenuation){
     @brief Sets the attenuation for output channel 2
     @param  attenuation
             The attenuation to applied to output channnel 2. 
-            Must be a `BD3491FS_Level`
+            Must be an integer > 0 and < 88
 */
 /**************************************************************************/
-void Adafruit_BD3491FS::setVolumeCh2(BD3491FS_Level attenuation){
+void Adafruit_BD3491FS::setVolumeCh2(uint8_t attenuation){
+    if (attenuation > 87){
+      return;
+    }
     Adafruit_I2CRegister volume =  
       Adafruit_I2CRegister(i2c_dev, BD3491FS_VOLUME_GAIN_CH2, 1);
     volume.write(attenuation << 1);
@@ -128,29 +138,37 @@ void Adafruit_BD3491FS::setVolumeCh2(BD3491FS_Level attenuation){
 /*!
     @brief Applys gain to or cuts the Bass range.
     @param  level
-            The amount of gain or cut. Must be a `BD3491FS_Level`
+            The amount of gain or cut. Must be a `BD3491FS_Level` and cannot
+            be above 14dB
     @param  cut
             Cut or Boost. Set true to cut, or false to boost
 
 */
 /**************************************************************************/
 void Adafruit_BD3491FS::setBassGain(BD3491FS_Level level, bool cut){
-    Adafruit_I2CRegister bass_gain =  
-      Adafruit_I2CRegister(i2c_dev, BD3491FS_BASS_GAIN, 1);
-    bass_gain.write((cut <<7) & (level << 1));
+  if(level >7){
+    return;
+  }
+  Adafruit_I2CRegister bass_gain =  
+    Adafruit_I2CRegister(i2c_dev, BD3491FS_BASS_GAIN, 1);
+  bass_gain.write((cut <<7) & (level << 1));
 }
 
 /**************************************************************************/
 /*!
     @brief Applys gain to or cuts the Treble range.
     @param  level
-            The amount of gain or cut. Must be a `BD3491FS_Level`
+            The amount of gain or cut. Must be a `BD3491FS_Level` and cannot
+            be above 14dB
     @param  cut
             Cut or Boost. Set true to cut, or false to boost
 */
 /**************************************************************************/
 void Adafruit_BD3491FS::setTrebleGain(BD3491FS_Level level, bool cut){
-    Adafruit_I2CRegister treble_gain =  
-      Adafruit_I2CRegister(i2c_dev, BD3491FS_TREBLE_GAIN, 1);
-    treble_gain.write((cut <<7) & (level << 1));
+  if((level <0) || (level >7)){
+    return;
+  }
+  Adafruit_I2CRegister treble_gain =  
+    Adafruit_I2CRegister(i2c_dev, BD3491FS_TREBLE_GAIN, 1);
+  treble_gain.write((cut <<7) & (level << 1));
 }

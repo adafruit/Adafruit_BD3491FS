@@ -78,8 +78,8 @@ public:
   void reset(void);
   void setCurrentInput(BD3491FS_Input input);
   void setInputGain(BD3491FS_Level gain);
-  void setVolumeCh1(BD3491FS_Level attenuation);
-  void setVolumeCh2(BD3491FS_Level attenuation);
+  void setVolumeCh1(uint8_t attenuation);
+  void setVolumeCh2(uint8_t attenuation);
   void setBassGain(BD3491FS_Level level, bool cut);
   void setTrebleGain(BD3491FS_Level level, bool cut);
 
