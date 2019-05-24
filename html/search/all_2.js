@@ -29,5 +29,5 @@ var searchData=
   ['bd3491fs_5ftreble_5fgain',['BD3491FS_TREBLE_GAIN',['../_adafruit___b_d3491_f_s_8h.html#a9f05fbcbca90cdc796e4b374aad4ace5',1,'Adafruit_BD3491FS.h']]],
   ['bd3491fs_5fvolume_5fgain_5fch1',['BD3491FS_VOLUME_GAIN_CH1',['../_adafruit___b_d3491_f_s_8h.html#ad920af8f271cc4c6a8e8462a439bae30',1,'Adafruit_BD3491FS.h']]],
   ['bd3491fs_5fvolume_5fgain_5fch2',['BD3491FS_VOLUME_GAIN_CH2',['../_adafruit___b_d3491_f_s_8h.html#ad1414929414e7e4e67eb7d4d71387f7e',1,'Adafruit_BD3491FS.h']]],
-  ['begin',['begin',['../class_adafruit___b_d3491_f_s.html#ac79571efeaf11a1cc8e22b0aa6072724',1,'Adafruit_BD3491FS']]]
+  ['begin',['begin',['../class_adafruit___b_d3491_f_s.html#a7edf3fd2e5b5074824ac39a5d9225582',1,'Adafruit_BD3491FS']]]
 ];
